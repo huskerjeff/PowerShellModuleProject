@@ -3,7 +3,7 @@ Install-Module -Name PSScriptAnalyzer -Force
 describe 'Module-level tests' {
 
     it 'the module imports successfully' {
-        { Import-Module "$PSScriptRoot\PowerShellModuleProject.psm1" -ErrorAction Stop } | should -not throw
+        { Import-Module (Resolve-Path('PowerShellModuleProject.psm1'))  } | should -Be -Not  8
     }
 
     it 'the module has an associated manifest' {

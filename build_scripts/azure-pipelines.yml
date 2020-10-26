@@ -36,6 +36,7 @@ stages:
   jobs:
   - job: Test
     steps:
+      
     - task: PublishTestResults@2
       inputs:
         testResultsFormat: "NUnit"
